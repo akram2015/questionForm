@@ -1,11 +1,25 @@
 <template name="index">
-  <form role = "form">
-    <div>
+  <h1>Question Form</h1>
+    <div class="form-group">
       <label for= "text"> Enter the Question </label>
       <input id="q1" type="text" class="form-control">
     </div>
-    <div>
-      <a class = "form-control button"> Submit </a>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-push-6">
+            <a class = "form-control addQuestion"> Add Question </a>
+          </div>
+          <div class="col-md-push-6">
+            <a class = "form-control finished"> Finished </a>
+          </div>
+        </div>
       </div>
-    </form>
+    <div class="">
+      <ul>
+        {{#each question}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+
+    </div>
   </template>
