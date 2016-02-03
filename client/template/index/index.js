@@ -2,6 +2,9 @@ Session.set('array',[]);
 Template.index.helpers({
   question: function(){
     return Session.get('array');
+  },
+  form: function(){
+    return Question.find().fetch();
   }
 });
 
